@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard</title>
+</head>
+<body>
+    <h1>SpaceTraders Agent Dashboard</h1>
+    {% if agent.error %}
+        <p style="color: red;">{{ agent.error }}</p>
+    {% else %}
+
+        <p><strong>Agent Symbol:</strong> {{ agent.symbol }}</p>
+        <p><strong>Headquarters:</strong> {{ agent.headquarters }}</p>
+        <p><strong>Credits:</strong> {{ agent.credits }}</p>
+        <p><strong>Ships Owned:</strong> {{ agent.shipCount }}</p>
+        <p><strong>Faction:</strong> {{ agent.startingFaction }}</p>
+    {% endif %}
+</body>
+</html>
+
